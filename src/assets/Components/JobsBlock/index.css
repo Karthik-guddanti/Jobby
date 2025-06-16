@@ -1,0 +1,14 @@
+.search-bar{
+  margin-left: 60vw;
+  height: 30px;
+  width: 200px;
+}
+
+.no-job{
+  margin-top: 100px;
+  margin-left: 300px;
+}
+
+.jobsBlock-container{
+  background-color: grey;
+}

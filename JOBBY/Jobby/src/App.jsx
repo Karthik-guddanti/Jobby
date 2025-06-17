@@ -1,16 +1,15 @@
 import './App.css'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Home from './assets/Components/Home'
-import PageNotFound from './assets/Components/PageNotFound'
-import Jobs from './assets/Components/Jobs'
-import Login from './assets/Components/login'
+import Home from './Components/Home'
+import PageNotFound from './Components/PageNotFound'
+import Jobs from './Components/Jobs'
+import Login from './Components/login'
 function App() {
   
 
   return (
       <div>
       <BrowserRouter>
-        
         <Routes>
           <Route path="/home" element={<Home/>}/>
           <Route path="/jobs" element={<Jobs/>}/>

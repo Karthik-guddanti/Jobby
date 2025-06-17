@@ -1,0 +1,15 @@
+.card{
+    background-image: url("https://assets.ccbp.in/frontend/react-js/profile-bg.png");
+    background-size: cover;
+    border-radius: 10px;
+    width:220px;
+    padding: 10px;
+    margin-top: 50px;
+    font-family:  Monoton;
+    
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}

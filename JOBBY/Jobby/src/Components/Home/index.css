@@ -1,0 +1,22 @@
+.button{
+    background-color: blueviolet;
+    color: white;
+    width: 100px;
+    height: 35px;
+    font-size: 16px;
+
+}
+.button:hover{
+    color: gold;
+    box-shadow: 0 0 10px 2px gold;
+}
+.Home-bg{
+    background-image: url("https://assets.ccbp.in/frontend/react-js/home-lg-bg.png");
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    font-family: sans-serif;
+    font-size: 35px;
+    padding:50px;
+    padding-top: 350px;
+}

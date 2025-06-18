@@ -50,12 +50,12 @@ function Login(){
                 <div className="set">
                     <label>Username</label>
                     <br/>
-                    <input  type="type" placeholder="Enter Username" onChange={onChangeUsername}/>
+                    <input className="inputEle" type="type" placeholder="Enter Username" onChange={onChangeUsername}/>
                 </div>
                 <div className="set">
                     <label>Password</label>
                     <br/>
-                    <input type="password" placeholder="Enter Password" onChange={onChangePassword}/>
+                    <input className="inputEle" type="password" placeholder="Enter Password" onChange={onChangePassword}/>
                 </div>
                 <button type="submit">Submit</button>
             </form>

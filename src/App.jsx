@@ -8,7 +8,7 @@ function App() {
   
 
   return (
-      <div>
+  
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<Home/>}/>
@@ -17,7 +17,7 @@ function App() {
           <Route path="*" element={<PageNotFound/>}/>
         </Routes>        
       </BrowserRouter>
-    </div>
+
   )
 }
 

@@ -13,7 +13,7 @@ const Sidebar = ({ onTypeChange, onSalaryChange }) => {
     <div>
       <div className="card">
         <img src="" alt="profile" />
-        <h3>Manichandana</h3>
+        <h3>Karthik</h3>
         <b>Lead Frontend Developer</b>
       </div>
       <hr />
@@ -27,11 +27,12 @@ const Sidebar = ({ onTypeChange, onSalaryChange }) => {
       <hr />
       <h2>Salary Range</h2>
       <div className="list">
+        <label><input type="radio" name="salary" value="0" onChange={handleSalaryChange} />0LPA and above</label>
         <label><input type="radio" name="salary" value="10" onChange={handleSalaryChange} />10LPA and above</label>
         <label><input type="radio" name="salary" value="20" onChange={handleSalaryChange} />20LPA and above</label>
         <label><input type="radio" name="salary" value="30" onChange={handleSalaryChange} />30LPA and above</label>
         <label><input type="radio" name="salary" value="40" onChange={handleSalaryChange} />40LPA and above</label>
-        <label><input type="radio" name="salary" value="0" onChange={handleSalaryChange} />0LPA and above</label>
+        
         
       </div>
     </div>

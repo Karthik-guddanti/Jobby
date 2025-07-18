@@ -4,11 +4,12 @@
     width: 100px;
     height: 35px;
     font-size: 16px;
-
+    border-radius: 5px;
 }
 .button:hover{
-    
     box-shadow: violet;
+    transition: 0.3s;
+    background-color: darkviolet;
 }
 .Home-bg{
     background-image: url("https://assets.ccbp.in/frontend/react-js/home-lg-bg.png");

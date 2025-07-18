@@ -1,38 +1,55 @@
-import "./index.css";
+import './index.css';
+
+const employmentTypes = [
+  { label: 'Full Time', id: 'FULLTIME' },
+  { label: 'Part Time', id: 'PARTTIME' },
+  { label: 'Freelance', id: 'FREELANCE' },
+  { label: 'Internship', id: 'INTERNSHIP' },
+];
+
+const salaryRanges = [
+  { label: '10 LPA and above', id: '1000000' },
+  { label: '20 LPA and above', id: '2000000' },
+  { label: '30 LPA and above', id: '3000000' },
+  { label: '40 LPA and above', id: '4000000' },
+];
 
 const Sidebar = ({ onTypeChange, onSalaryChange }) => {
-  const handleTypeChange = (event) => {
-    onTypeChange(event.target.value);
-  };
-
-  const handleSalaryChange = (event) => {
-    onSalaryChange(event.target.value);
-  };
-
   return (
-    <div>
-      <div className="card">
-        <img src="" alt="profile" />
-        <h3>Manichandana</h3>
-        <b>Lead Frontend Developer</b>
+    <div className="sidebar-container">
+      <div className='card'>
+          <h1>Rahul</h1>
+          <p>Lead Frontend Developer</p>
       </div>
-      <hr />
-      <h2>Type of Employment</h2>
-      <div className="list">
-        <label><input type="checkbox" value="Full Time" onChange={handleTypeChange} /> Full Time</label>
-        <label><input type="checkbox" value="Part Time" onChange={handleTypeChange} /> Part Time</label>
-        <label><input type="checkbox" value="Freelance" onChange={handleTypeChange} /> Freelance</label>
-        <label><input type="checkbox" value="Internship" onChange={handleTypeChange} /> Internship</label>
+      <div className="filter-group">
+        <h3>Type of Employment</h3>
+        {employmentTypes.map((each) => (
+          <div key={each.id}>
+            <input
+              type="checkbox"
+              id={each.id}
+              value={each.label.toUpperCase()}
+              onChange={(e) => onTypeChange(e.target.value)}
+            />
+            <label htmlFor={each.id}>{each.label}</label>
+          </div>
+        ))}
       </div>
-      <hr />
-      <h2>Salary Range</h2>
-      <div className="list">
-        <label><input type="radio" name="salary" value="10" onChange={handleSalaryChange} />10LPA and above</label>
-        <label><input type="radio" name="salary" value="20" onChange={handleSalaryChange} />20LPA and above</label>
-        <label><input type="radio" name="salary" value="30" onChange={handleSalaryChange} />30LPA and above</label>
-        <label><input type="radio" name="salary" value="40" onChange={handleSalaryChange} />40LPA and above</label>
-        <label><input type="radio" name="salary" value="0" onChange={handleSalaryChange} />0LPA and above</label>
-        
+
+      <div className="filter-group">
+        <h3>Salary Range</h3>
+        {salaryRanges.map((each) => (
+          <div key={each.id}>
+            <input
+              type="radio"
+              name="salary"
+              id={each.id}
+              value={each.id}
+              onChange={(e) => onSalaryChange(e.target.value)}
+            />
+            <label htmlFor={each.id}>{each.label}</label>
+          </div>
+        ))}
       </div>
     </div>
   );

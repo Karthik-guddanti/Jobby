@@ -1,23 +1,48 @@
-import './App.css'
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { Routes, Route } from 'react-router-dom'
+import LoginForm from './Components/LoginForm'
 import Home from './Components/Home'
-import PageNotFound from './Components/PageNotFound'
 import Jobs from './Components/Jobs'
-import Login from './Components/login'
-function App() {
-  
+import JobDetails from './Components/JobDetails'
+import PageNotFound from './Components/PageNotFound'
+import ProtectedRoute from './Components/ProtectedRoute'
 
+function App() {
   return (
-      <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/jobs" element={<Jobs/>}/>
-          <Route path="/" element={<Login/>}/>
-          <Route path="*" element={<PageNotFound/>}/>
-        </Routes>        
-      </BrowserRouter>
-    </div>
+    <Routes>
+     
+      <Route path="/login" element={<LoginForm />} />
+
+    
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/jobs"
+        element={
+          <ProtectedRoute>
+            <Jobs />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/jobs/:id"
+        element={
+          <ProtectedRoute>
+            <JobDetails />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Catch-all for invalid routes */}
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
   )
 }
 

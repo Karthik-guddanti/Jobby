@@ -1,0 +1,88 @@
+/* index.css */
+
+/* Font and base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Comic Sans MS', cursive, sans-serif;
+  background-color: #262724;
+}
+
+/* Center the login form */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form box */
+.login-container form {
+  background-color: #3f403e;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 350px;
+
+}
+
+/* Logo */
+.login-container h1 {
+  font-size: 32px;
+  color: #837df6; /* vibrant violet-blue */
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Label styling */
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Input fields */
+.login-container input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #efe9e9;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color:#444542;
+  color: #efe9e9;
+}
+
+/* Button */
+.login-container button {
+  padding: 10px 20px;
+  background-color:  rgb(80, 80, 235);
+   
+  color: rgb(255, 255, 255);
+  
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.login-container button :hover{
+  background-color:#6872d9;
+  box-shadow: 0 0 10px 20px rgb(147, 147, 239);
+
+}
+
+/* Error message */
+.error {
+  color: #ff4d4f;
+  margin-top: 10px;
+}
+
+.logo{
+
+  margin-bottom: 20px;
+}

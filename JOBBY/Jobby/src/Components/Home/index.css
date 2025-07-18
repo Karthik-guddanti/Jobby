@@ -4,11 +4,12 @@
     width: 100px;
     height: 35px;
     font-size: 16px;
-
+    border-radius: 5px;
 }
 .button:hover{
-    color: gold;
-    box-shadow: 0 0 10px 2px gold;
+    box-shadow: violet;
+    transition: 0.3s;
+    background-color: darkviolet;
 }
 .Home-bg{
     background-image: url("https://assets.ccbp.in/frontend/react-js/home-lg-bg.png");
@@ -19,4 +20,12 @@
     font-size: 35px;
     padding:50px;
     padding-top: 350px;
+}
+.search-bar{
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    margin: 20px;
 }

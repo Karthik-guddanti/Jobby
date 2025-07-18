@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 import LoginForm from './Components/LoginForm'
-import Home from './components/Home'
-import Jobs from './components/Jobs'
+import Home from './Components/Home'
+import Jobs from './Components/Jobs'
 import JobDetails from './Components/JobDetails'
-import PageNotFound from './components/PageNotFound'
-import ProtectedRoute from './components/ProtectedRoute'
+import PageNotFound from './Components/PageNotFound'
+import ProtectedRoute from './Components/ProtectedRoute'
 
 function App() {
   return (

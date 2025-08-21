@@ -1,0 +1,9 @@
+.home-hero {
+  width: 100vw;
+  background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  padding: 4rem 2rem 2rem 2rem;
+  text-align: center;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 8px 32px rgba(80, 120, 200, 0.10);
+}

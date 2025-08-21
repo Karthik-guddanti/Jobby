@@ -1,0 +1,46 @@
+.category-details-main {
+  display: flex;
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+}
+
+.category-details-content {
+  margin-left: 200px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.playlist-card {
+  background-color: #282828;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.playlist-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.playlist-img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.playlist-name {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.clickable {
+  cursor: pointer;
+}

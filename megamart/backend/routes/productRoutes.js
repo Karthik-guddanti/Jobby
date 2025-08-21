@@ -1,18 +1,15 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 const {
-  createProduct,
   getProducts,
-  getProductById,
-  updateProduct,
+  createProduct,
   deleteProduct,
-} = require("../controllers/productController");
+  getProductById,
+} = require('../controllers/productController');
 
-// CRUD Routes
-router.post("/", createProduct);
-router.get("/", getProducts);
-router.get("/:id", getProductById);
-router.put("/:id", updateProduct);
-router.delete("/:id", deleteProduct);
+router.get('/', getProducts);
+router.post('/', createProduct);
+router.delete('/:id', deleteProduct);
+router.get('/:id', getProductById);
 
 module.exports = router;

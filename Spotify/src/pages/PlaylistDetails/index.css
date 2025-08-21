@@ -1,0 +1,26 @@
+.playlist-details-main {
+  display: flex;
+  min-height: 100vh;
+}
+
+.playlist-details-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #121212;
+  color: white;
+}
+
+.songs-list {
+  margin-top: 20px;
+}
+
+.song-card {
+  background-color: #1e1e1e;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.song-card p {
+  margin: 5px 0;
+}

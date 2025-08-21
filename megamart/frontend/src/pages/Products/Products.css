@@ -1,0 +1,10 @@
+.products-page {
+  width: 100vw;
+  min-height: 80vh;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+}

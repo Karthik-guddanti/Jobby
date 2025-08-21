@@ -1,0 +1,31 @@
+.album-main {
+  display: flex;
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+}
+
+.album-content {
+  margin-left: 200px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.album-image {
+  width: 180px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.album-songs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.song-card {
+  background-color: #1f1f1f;
+  padding: 12px;
+  border-radius: 8px;
+}

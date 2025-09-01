@@ -3,10 +3,11 @@ import Cookies from "js-cookie";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
 import JobsBlock from "../JobsBlock";
-import { ThreeDots } from 'react-loader-spinner';
+import { ThreeDots } from "react-loader-spinner";
 import "./index.css";
 
 const API_STATUS = {
+  INITIAL: "INITIAL",
   LOADING: "LOADING",
   SUCCESS: "SUCCESS",
   FAILURE: "FAILURE",
@@ -83,15 +84,15 @@ function Jobs() {
         filters.type.includes(job.type.toUpperCase());
 
       const matchSalary =
-        filters.salary === "" || job.salary >= parseInt(filters.salary) / 100000;
-
-      const searchQuery = filters.search.toLowerCase();
+        filters.salary === "" ||
+        job.salary >= parseInt(filters.salary) / 100000;
+      const searchQuery = (filters.search || "").toLowerCase();
 
       const matchSearch =
-        job.role.toLowerCase().includes(searchQuery) ||
-        job.company.toLowerCase().includes(searchQuery) ||
-        job.location.toLowerCase().includes(searchQuery) ||
-        job.description.toLowerCase().includes(searchQuery);
+        (job.role?.toLowerCase() || "").includes(searchQuery) ||
+        (job.company?.toLowerCase() || "").includes(searchQuery) ||
+        (job.location?.toLowerCase() || "").includes(searchQuery) ||
+        (job.description?.toLowerCase() || "").includes(searchQuery);
 
       return matchType && matchSalary && matchSearch;
     });

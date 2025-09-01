@@ -27,3 +27,17 @@
   font-weight: bold;
 
 }
+
+.profile-img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  margin-left: 30px;
+}
+
+.profile-info {
+  margin-left: 30px;
+  font-family: roboto;
+  font-size: small;
+  margin-top: 20px;
+}

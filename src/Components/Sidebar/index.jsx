@@ -18,8 +18,11 @@ const Sidebar = ({ onTypeChange, onSalaryChange }) => {
   return (
     <div className="sidebar-container">
       <div className='card'>
-          <h1>Rahul</h1>
-          <p>Lead Frontend Developer</p>
+          <img src="https://res.cloudinary.com/deakngwen/image/upload/v1756719194/Screenshot_2025-09-01_150214_kr3hcv.png" className='profile-img'/>
+          <div className='profile-info'>
+            <h1>Rahul</h1>
+            <p>Lead Frontend Developer</p>
+          </div>
       </div>
       <div className="filter-group">
         <h3>Type of Employment</h3>

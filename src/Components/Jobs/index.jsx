@@ -7,7 +7,6 @@ import { ThreeDots } from 'react-loader-spinner';
 import "./index.css";
 
 const API_STATUS = {
- 
   LOADING: "LOADING",
   SUCCESS: "SUCCESS",
   FAILURE: "FAILURE",
@@ -48,7 +47,7 @@ function Jobs() {
         location: job.location,
         type: job.employment_type,
         rating: job.rating,
-        salary: parseInt(job.package_per_annum.replace(" LPA", "")), // convert "12 LPA" -> 12
+        salary: parseInt(job.package_per_annum.replace(" LPA", "")), // "12 LPA" -> 12
         description: job.job_description,
         companyLogoUrl: job.company_logo_url,
       }));
@@ -80,12 +79,19 @@ function Jobs() {
   const getFilteredJobs = () => {
     return allJobs.filter((job) => {
       const matchType =
-        filters.type.length === 0 || filters.type.includes(job.type.toUpperCase());
+        filters.type.length === 0 ||
+        filters.type.includes(job.type.toUpperCase());
+
       const matchSalary =
         filters.salary === "" || job.salary >= parseInt(filters.salary) / 100000;
-      const matchSearch = job.role
-        .toLowerCase()
-        .includes(filters.search.toLowerCase());
+
+      const searchQuery = filters.search.toLowerCase();
+
+      const matchSearch =
+        job.role.toLowerCase().includes(searchQuery) ||
+        job.company.toLowerCase().includes(searchQuery) ||
+        job.location.toLowerCase().includes(searchQuery) ||
+        job.description.toLowerCase().includes(searchQuery);
 
       return matchType && matchSalary && matchSearch;
     });
@@ -93,14 +99,12 @@ function Jobs() {
 
   const renderContent = () => {
     switch (status) {
-
       case API_STATUS.LOADING:
         return (
           <div className="loader-container" data-testid="loader">
             <ThreeDots color="#ffffff" height={50} width={50} />
           </div>
         );
-
 
       case API_STATUS.FAILURE:
         return (
@@ -120,7 +124,6 @@ function Jobs() {
           </div>
         );
 
-
       case API_STATUS.SUCCESS:
         return (
           <JobsBlock
@@ -129,7 +132,6 @@ function Jobs() {
             onSearchChange={handleSearchChange}
           />
         );
-        
 
       default:
         return null;
